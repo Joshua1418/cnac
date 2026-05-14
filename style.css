@@ -1,0 +1,1069 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html  {
+    scroll-behavior: smooth;
+    transition: 0.1s;
+}
+body {
+    width: 100%;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    color: rgb(1, 1, 12);
+    font-size: 1.2rem;
+}
+.loading {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    z-index: 100;
+    top: 0;
+}
+.loading > img {
+    width: 90%;
+}
+
+.header {
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 18vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.5rem;
+}
+#titre {
+    display: none;
+}
+.header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+.header > div > img {
+    width: 15%;
+}
+.header > div > h2 {
+    font-size: 1.2rem;
+}
+.navBar {
+    padding: 2rem;
+}
+.navBar > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+.navBar > ul > li {
+    text-wrap: nowrap;
+}
+.navBar > ul > li > a {
+    text-decoration: none;
+    color: rgb(2, 41, 53);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 300;
+    transition: 0.2s;
+}
+.navBar > ul > li > a:hover {
+    color: rgb(53, 5, 2);
+}
+.menu {
+    display: none;
+}
+.sideNav {
+    display: none;
+}
+.active {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+#background-carousel {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+.acceuil {
+    width: 100%;
+    background-color: rgba(18, 17, 17, 0.845);
+    margin-top: 18vh;
+    min-height: 82vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0.5rem;
+    margin-right: 10rem;
+    height: 60vh;
+    width: 70%;
+    color: white;
+    position: relative;
+    -webkit-animation-name: animateright;
+    -webkit-animation-duration: 2s;
+    animation-name: animateright;
+    animation-duration: 2s
+}
+.home-text > h1 {
+    color: white;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+.sous-home-text {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s
+}
+.sous-home-text > h1 {
+    padding-top: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+.home-text > button {
+    margin-top: 1rem;
+    height: 10vh;
+    width: 40%;
+    text-transform: uppercase;
+    border: none;
+    background-color: white;
+    border-radius: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    -webkit-animation-name: animateright;
+    -webkit-animation-duration: 2s;
+    animation-name: animateright;
+    animation-duration: 2s;
+    transition: 0.4s;
+}
+.home-text > button:hover {
+    background-color: black;
+    color: white;
+}
+.home-commission {
+    width: 100%;
+    background-color: white;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.cnaci-logo {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.cnaci-logo > img {
+    width: 30%;
+}
+.cnaci-logoenu {
+    padding: 1rem;
+    height: 50vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-transform: capitalize;
+}
+.cnaci-logoenu > h1 {
+    text-transform: uppercase;
+    font-weight: 200;
+}
+.cnaci-logoenu > p {
+   font-weight: 200;
+}
+.container-home {
+    background-color: rgb(246, 246, 246);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+.title-container-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.containers-to-about {
+    display:grid ;
+    grid-template-columns: repeat(2, 70vh);
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;  
+    padding: 2rem;
+}
+.containers-to-about > div {
+    color: rgb(2, 12, 48);
+    background-color: rgba(220, 217, 217, 0.872);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    width: 90%;
+    border-radius: 1rem;
+}
+.containers-to-about > div > img {
+    width: 100%;
+    border-radius: 1rem 1rem 0rem 0rem ;
+    height: 45vh;    
+}
+.containers-to-about > div > h3, p, button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.containers-to-about > div > button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+    cursor: pointer;
+}
+.directeur-about {
+    background-color: white;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+}
+.directeur-about > img {
+    width:30%;
+}
+.directeur-about > div {
+    width: 50%;
+    text-align: justify;
+    padding: 1rem;
+}
+.mission {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.header-mission {
+    margin-top: 17vh;
+    min-height: 40vh;
+    width: 100%;
+    background-color: rgb(217, 214, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: rgb(2, 12, 48);
+    padding-left: 3rem;
+}
+.header-mission > h1 {
+    font-size: 3rem;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+.header-mission > p {
+    font-size: 1.2rem;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+.assaini-mission {
+    min-height: 100vh;
+    padding: 1rem;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s
+}
+.assaini-mission > h1 {
+    padding: 1rem;
+}
+.assaini-mission > ul {
+    padding-left: 1rem;
+    list-style: inside circle;
+}
+.assaini-mission > ul > li  {
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.ass-mission {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding:  1rem;
+    margin: 0 2rem;
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.ass-mission > img {
+    width: 4%;
+    border-radius: 0.5rem;
+}
+.ass-mission > h1 {
+    font-size: 1.9rem;
+}
+.ass-txt {
+    padding-left: 3rem;
+    width: 50%;
+}
+.sub-item-ass {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.sub-item-ass > img {
+    width:3%;
+}
+.ass-last-content {
+    background-color: rgb(241, 240, 240);
+    border-radius:1rem;
+    height: 35vh;
+    width: 40%;
+    margin:1rem ;
+    padding: 2rem;
+}
+.last-bar {
+    border: 1px solid rgba(1, 1, 17, 0.338);
+}
+.demand-question {
+    background-color: rgb(217, 214, 214);
+    width: 100%;
+    min-height: 40vh;
+    color: rgb(2, 12, 48);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.demand-question > h2 {
+    font-size: 2.5rem;
+}
+.demand-question > p {
+    font-size: 1.3rem;
+}
+#background-domaine {
+    height: 65vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#about {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+.about {
+    background-color: rgba(255, 255, 255, 0.845);
+    display: flex;
+    flex-direction: column;
+}
+.header-about {
+    margin-top: 17vh;
+    min-height: 40vh;
+    width: 100%;
+    background-color: rgb(217, 214, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: rgb(2, 12, 48);
+    padding-left: 3rem;
+}
+.header-about > h1 {
+    font-size: 3rem;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+.header-about > p {
+    font-size: 1.2rem;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+.detail-about {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.detail-item {
+    width: 100%;
+    height: 50vh;
+    padding: 2rem 1rem;
+    text-align: justify;
+    color: rgb(2, 12, 48);
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s
+}
+.detail-valeur {
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header-detail-valeur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(2, 12, 48);
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.container-detail-valeur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.container-detail-valeur > div {
+    border-radius: 1rem;
+    height: 50vh;
+    width: 30%;
+    box-shadow: 1px 1px 2px 1px rgba(50, 50, 50, 0.208);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.container-detail-valeur > div > img {
+    width: 20%;
+}
+.structure {
+    background-color: rgba(217, 214, 214, 0.559);
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+.structure-title {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    animation: reveal linear;
+    animation-timeline:view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
+}
+.directions-generales {
+    width: 100%;
+    min-height: 100vh;
+    display:grid ;
+    grid-template-columns: repeat(2, 70vh);
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;  
+    padding: 2rem;
+
+}
+.directions-generales > div {
+    background-color: white;
+    height: 50vh;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px rgba(50, 50, 50, 0.208);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   align-items: flex-start; 
+   padding: 2rem;
+}
+.directions-generales > div > ul {
+    padding-left: 1rem;
+    list-style: inside;
+}
+.informations-cles {
+    background-color: rgb(246, 245, 245);
+    width: 100%;
+    min-height: 80vh;
+}
+.information-title {
+    text-align: center;
+    padding: 2rem;
+}
+.informations-containers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.informations-containers > div {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px rgba(50, 50, 50, 0.208);
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+}
+.header-contact {
+    margin-top: 17vh;
+    min-height: 40vh;
+    width: 100%;
+    background-color: rgb(217, 214, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: rgb(2, 12, 48);
+    padding-left: 3rem;
+}
+.header-contact > h1 {
+    font-size: 3rem;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+.header-contact > p {
+    font-size: 1.3rem;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s
+}
+.main-contact {
+    background-color: rgb(255, 255, 255);
+    display:grid ;
+    grid-template-columns: repeat(2, 70vh);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;  
+    padding: 2rem;   
+}
+.main-contact > div {
+    color: rgb(1, 1, 27);
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px rgba(50, 50, 50, 0.208);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    gap: 1rem;
+}
+.main-contact > div > img {
+    width: 10%;
+}
+.main-contact > div > p {
+    text-align: center;
+}
+.direction-contact {
+    background-color: rgba(246, 244, 244, 0.973);
+    display:grid ;
+    grid-template-columns: repeat(2, 70vh);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;  
+    padding: 1.5rem;
+}
+.direction-item {
+    min-height: 30vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 0.7rem;
+    padding: 4rem 3rem;
+    gap: 1rem;
+    box-shadow: 1px 1px 2px 1px rgba(50, 50, 50, 0.208); 
+}
+.direction-item > h2 {
+    font-size: 1.4rem;
+}
+.sub-item {
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-left:1rem ;
+}
+.sub-item > img {
+    width: 10%;
+}
+.footer {
+    width: 100%;
+    background-color: rgb(8, 8, 14);
+    background-color: rgb(3, 3, 101);
+    min-height: 50vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-1 {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+}
+.container-2 {
+    flex: 1 1 250px;
+}
+.container-2 > a {
+    color: white;
+}
+.container-3 {
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-3 > p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+/* Tablette */
+@media screen {
+    
+}
+/* RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width:475px) {
+    .header {
+        width: 100%;
+        height: 15vh;
+    }
+    .header > div {
+        gap: 0.2rem;
+    }
+    .header > div > h2 {
+        display: none;
+    }
+    .header > div > img {
+        width: 45%;
+    }
+    .navBar {
+        display: none;
+    }
+    .menu {
+        display: block;
+        width: 14%;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+    }
+    .sideNav {
+        height: 90vh;
+        width: 0%;
+        position: fixed;
+        top:15vh;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden ;
+        border-radius: 0em  0em 0em 0em;
+        transition:0.1s ;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+}
+    .sideNav > div {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-bottom: 1px solid black;
+        width: 100%;
+        cursor: pointer;
+
+}
+    .active-link {
+       background-color: rgb(228, 228, 236);
+    }
+    .sideNav > div > a {
+        padding: 0.9rem;
+        text-wrap: nowrap;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        color: rgb(1, 4, 23);
+    }
+    #background-carousel {
+        background-position: center;
+    }
+    .acceuil {
+        margin-top: 15vh;
+        min-height: 85vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-text {
+        min-height: 85vh;
+        padding: 0rem;
+        margin-right: 5rem;
+    }
+    .home-text > h1 {
+        text-wrap: wrap;
+    }
+    .sous-home-text {
+        width:300px;
+    }
+    .home-text > button {
+        width: 100%;
+        height: 7vh;
+    }
+    .form-connexion {
+        border: 2px solid yellow;
+        width: 90%;
+        position: relative;
+        -webkit-animation-name: animateright;
+        -webkit-animation-duration: 1s;
+        animation-name: animateright;
+        animation-duration: 1s;
+    }
+    .home-commission {
+        min-height: 85vh;
+    }
+    .cnaci-logo {
+        position: relative;
+        flex-direction: column;
+        height: fit-content;
+        gap: 0;
+        max-height: 85vh;
+    }
+    .cnaci-logo > img {
+        width: 90%;
+        min-width: 50%;
+    }
+    .cnaci-contenu {
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title-container-home {
+        width: 100%;
+    }
+    .containers-to-about  {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .containers-to-about > div {
+        width: 100%;
+    }
+    .containers-to-about > div > img {
+        height: 35vh;
+
+    }
+    .containers-to-about > div > p {
+        padding-right: 1rem;
+    }
+    .background-domaine > img {
+        width: 90%;
+        height: 40vh;
+    }
+    .directeur-about {
+      flex-direction: column;
+      border: 2px solid blue;
+    }
+    .directeur-about > img {
+        width:100%;
+    }
+    .directeur-about > div {
+       width: 100%;
+       padding: 0rem;
+    }
+    .about {
+        height:fit-content;
+    }
+    .header-about {    
+        gap: 1rem;
+        margin-top: 15vh;
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .header-about > h1 {
+        font-size: 2rem;
+        color: blue;
+    }
+
+    .detail-about {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .detail-item {
+        padding: 0rem ;
+        margin: 1rem;
+        height: fit-content;
+    }
+    .detail-item > p {
+        padding: 0rem;
+    }
+    .container-detail-valeur {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+    }
+    .container-detail-valeur > div {
+        width: 100%;
+        height: fit-content;
+        gap: 2rem;
+    }
+    .structure {
+        gap: 1rem;
+    }
+    .structure-title {
+        width: 100%;
+    }
+    .directions-generales {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .directions-generales > div {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        height: fit-content;
+    }
+    .informations-containers {
+        display: flex;
+        flex-direction: column;
+    }
+    .informations-containers > div {
+        height: 30vh;
+    }
+    .header-mission {
+        margin-top: 15vh;
+        padding-left: 1rem;
+    }
+    .header-mission > h1 {
+            font-size: 2rem;
+            color: blue;
+    }
+    .assaini-mission {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    .ass-mission {
+        margin: 0;
+    }
+    .ass-txt {
+        width: 100%;
+    }
+    .ass-mission > img {
+        width: 20%;
+    }
+    .ass-last-content {
+        width: 100%;
+        margin: 0;
+        padding: 1.7rem;
+        height: fit-content;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .demand-question {
+        padding: 2rem 1rem;
+        text-align: center;
+        min-height: fit-content;
+    }
+    .header-contact {
+        margin-top: 15vh;
+        padding: 1rem;
+    }
+    .header-contact > h1 {
+        font-size: 2rem;
+        color: blue;
+    }
+    .main-contact {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    .main-contact > div {
+        height: 30vh;
+        width: 95%;
+    }
+    .direction-contact {
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-item > p {
+        text-align: center;
+    }
+    .footer {
+        min-height: 85vh;
+    }
+}
+
+
+/* Animation */
+@-webkit-keyframes animatebottom {
+    from {
+          bottom:-60px;
+          opacity:0
+       }
+    to {
+      bottom:0px;
+      opacity:1 ;
+      }
+}
+@keyframes animatebottom {
+    from{
+          bottom:-60px;
+          opacity:0
+    }
+    to{
+          bottom:0;
+          opacity:1
+    }
+}
+@-webkit-keyframes animateright {
+    from {
+        right: -50px;
+        opacity: 0;
+    }
+    to {
+        right: 0px;
+        opacity: 1;
+    }
+}
+@keyframes animateright {
+    from {
+        right: -50px;
+        opacity: 0;
+    }
+    to {
+        right: 0px;
+        opacity: 1;
+    }
+}
+@keyframes reveal {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}   

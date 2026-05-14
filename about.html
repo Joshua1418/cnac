@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CNACI</title>
+    <link rel="shortcut icon" href="CNAC.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <img src="Loading_icon.gif" alt="">
+    </div>
+    <header class="header">
+        <div>
+            <img src="CNAC.jpg" alt="logo_centre">
+            <h2 id="titre"> CNACI</h2>
+        </div>
+        <nav class="navBar">
+            <ul>
+                <li>
+                    <a href="index.html" >Acceuil</a>
+                </li>
+                <li>
+                    <a href="about.html" style="font-weight: 600;">A propos</a>
+                </li>
+                <li>
+                    <a href="mission.html">Missions</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="mySidenav" class="sideNav">
+            <div>
+                <a href="index.html">Accueil</a>
+            </div>
+            <div class="active-link">
+                <a href="about.html">A propos</a>
+            </div>
+            <div>
+                <a href="mission.html">Missions</a>
+            </div>
+            <div>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+        <img id="sideNav" src="menu.png" alt="" class="menu" onclick="openNav()"></header>
+    <main id="" class="main">
+        <section class="about">
+            <div class="header-about">
+                <h1>A Propos Du CNACI</h1>
+                <p>Commission Nationale d'Assainissement, Contrôle et Identification de la République Démocratique du Congo</p>
+            </div>
+            <div class="detail-about">
+                <div class="detail-item">
+                    <h2>Notre Mission</h2>
+                    <p>Proposer au Gouvernement central une politique concertée sur l'encadrement des économies et des intérêts publics, tout en renforçant le trésor public pour assurer un équilibre bénéfique pour tous les citoyens.</p>
+                    <br>
+                    <p>Le CNACI s'engage à identifier et contrôler les entités économiques qui échappent au fisc, à assainir l'environnement et à protéger les ressources publiques.</p>
+                </div>
+                <div class="detail-item">
+                    <h2>Notre Vision</h2>
+                    <p>Etre un établissement public de référence en matière d'assainissement, d'identification et de contrôle, contribuant à la bonne gouvernance économique et fiscale de la République Démocratique du Congo.</p>
+                    <br>
+                    <p>Nous aspirons à créer un environnement où la transparence, l'intégrité et le respect des lois sont les fondations d'une économie prospère et durable.</p>
+                </div>
+            </div>
+            <div class="detail-valeur">
+                <div class="header-detail-valeur">
+                    <h1>Nos Valeurs Fondamentales</h1>
+                </div>
+                <div class="container-detail-valeur">
+                    <div>
+                        <img src="rigueur.webp" alt="">
+                        <h3>Rigueur</h3>
+                        <p>Nous appliquons les normes les plus élevées dans tous nos contrôles et interventions.</p>
+                    </div>
+                    <div>
+                        <img src="integrite.webp" alt="">
+                        <h3>Intégrité</h3>
+                        <p>L'honnêteté et la transparence sont au coeur de nos actions et décisions.</p>
+                    </div>
+                    <div>
+                        <img src="engagement.webp" alt="">
+                        <h3>Engagement</h3>     
+                        <p>Nous nous engageons à servir l'Etat et les citoyens avec dévouement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="structure">
+                <div class="structure-title">
+                    <h2>Structure Organisationelle</h2>
+                    <p>Le CNACI est organisé autour de quatre directions centrales qui travaillent en coordinationn pour atteindre les objectifs de l'institution.</p>
+                </div>
+                <div class="directions-generales">
+                    <div>
+                        <h3>Directionn d'Assainissement</h3>
+                        <p>Protection de l'environnement et assainissement du milieu public</p>
+                        <p style="color: rgb(3, 3, 90); font-weight: bold;">Responsabilités :</p>
+                        <ul>
+                            <li>Assainissement des espaces publics</li>
+                            <li>Protection de l'environnement</li>
+                            <li>Sensibilisation communautaire</li>
+                            <li>Perception de la taxe d'assainissement</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Direction d'Identification</h3>
+                        <p>Identificaiton et immatriculation des entités économiques</p>
+                        <p style="color: rgb(3, 3, 90); font-weight: bold;">Responsabilités :</p>
+                        <ul>
+                            <li>Identificaion des boutiques et commerces</li>
+                            <li>Immatriculation des entreprises</li>
+                            <li>Gestion des frais d'identification</li>
+                            <li>Autorisation de pousuites judiciaires</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Direction des Contrôles</h3>
+                        <p>Lutte contre la fraude et les détournements</p>
+                        <p style="color: rgb(3, 3, 90); font-weight: bold;">Responsabilités :</p>
+                        <ul>
+                            <li>Contrôle des actes frauduleux</li>
+                            <li>Lutte contre le faux et usage de faux</li>
+                            <li>Prévention des détournements</li>
+                            <li>Imposition des amendes</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Direction des Formations</h3>
+                        <p>Renforcement des capacités des agents</p>
+                        <p style="color: rgb(3, 3, 90); font-weight: bold;">Responsabilités :</p>
+                        <ul>
+                            <li>Formation des agents</li>
+                            <li>Renforcement des capacités</li>
+                            <li>Evaluation du comportement</li>
+                            <li>Développement professionnel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="informations-cles">
+                <div class="information-title">
+                    <h2>Informations clés</h2>
+                </div>
+                <div class="informations-containers">
+                    <div>
+                        <h1 style="color: blue;">99</h1>
+                        <p>Année de duréé institutionnelle</p>
+                    </div>
+                    <div>
+                        <h1 style="color: maroon;">4</h1>
+                        <p>Directions centrales</p>
+                    </div>
+                    <div>
+                        <h1 style="color: orangered;">26</h1>
+                        <p>Provinces couvertes</p>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+         </main>
+         <footer class="footer">
+            <div class="container-1">
+                <div class="container-2">
+                    <h3>CNACI</h3>
+                    <p>
+                        <strong>&copy; 2026 Commission Nationale d'Assainissement, contrôle et d'Identification</strong>
+                    </p>
+                    <p>Tous droits réservés</p>
+                </div>
+                <div class="container-2">
+                    <h3>Nous contacter</h3>
+                    <p>Adresse : 35 Avenue Tombalbay, Kasa-vubu <br> Kinshasa, RDC</p>
+                    <p>Tél : +243 832 592 021</p>
+                    <p>Email : rdccnac@gmail.com</p>
+                    <a href="https://wa.me/+243832592021" style="margin: 0 5px; text-decoration: none;">WhatsApp : +243 832 592 021</a>
+                </div>
+              
+            </div>
+            <div class="container-3">
+                <p>Developped by <span style="color: rgb(0, 255, 225); cursor: pointer;" onclick="BetsaleelSoft()">Betsaleel Soft</span> </p>
+            </div>
+            </footer>
+</body>
+</html>
