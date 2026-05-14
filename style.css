@@ -781,7 +781,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        border-bottom: 0px solid black;
+        border-bottom: 1px solid black;
         width: 100%;
         cursor: pointer;
 
