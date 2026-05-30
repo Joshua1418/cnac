@@ -783,7 +783,6 @@ body {
         align-items: flex-start;
         border-bottom: 0px solid black;
         width: 100%;
-        cursor: pointer;
 
 }
     .active-link {
